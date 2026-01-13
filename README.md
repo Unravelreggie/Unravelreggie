@@ -1,4 +1,4 @@
-# 👋 Hi, I’m Reggie Zhang
+# 👋 Hi, I’m Reginald Zhang
 
 🎯 **International Pharmacovigilance (PV) Management**  
 🤖 **Automation & AI Systems Contributor @ Sinovac (科兴)**
