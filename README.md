@@ -8,6 +8,8 @@ Within the PV department, I am responsible for **designing and implementing inte
 
 My work focuses on bridging **PV operations, data engineering, and applied analytics**, with hands-on involvement in **system implementation, automation pipelines, and cross-team collaboration**.
 
+I am currently exploring the application of **AI models in pharmaceutical analytics**, with an emphasis on **active surveillance and risk signal detection**.
+
 ---
 
 ## 🎓 Education
@@ -15,7 +17,11 @@ My work focuses on bridging **PV operations, data engineering, and applied analy
 **Master of Science in Public Health (MSPH)**  
 **University of Miami**  
 Concentration: **Biostatistics**  
-Focus: Computational modeling in psychology & neuroscience
+Focus: **Computational Psychiatry**
+
+**Bachelor of Arts in Philosophy, Psychology, and Cognitive Science**  
+**Rutgers University**  
+Focus: **Philosophy of Mind, Cognition, and Computational Analysis**
 
 ---
 
@@ -61,7 +67,7 @@ Focus: Computational modeling in psychology & neuroscience
 ## 🧠 Current Focus
 
 - Building **PV-specific automation tools** for global safety workflows  
-- Participating in **group-level AI & intelligent system construction**  
+- Participating in **group-level AI and intelligent system construction**  
 - Supporting **vendor-integrated data platforms** and system interfaces  
 - Exploring scalable architectures for **PV analytics, QC automation, and decision support**
 
