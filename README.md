@@ -167,10 +167,26 @@ Majors: **Philosophy · Psychology · Cognitive Science**
 
 ---
 
-## 🐶 Outside of Work | 工作之外
+## 🏸🥊 Outside of Work | 工作之外
+
+Outside of work, I stay active through sports and training:
+
+- 🏸 **Badminton** — recreational player  
+- 🥊 **Boxing** — beginner-level training and fitness-focused practice  
+- 🎾 **Tennis** — actively working toward a **3.0 level**
 
 Proud dog parent to a **French Bulldog** 🐾 and a **Golden Retriever** 🐕  
-法国斗牛犬 🐾 与金毛寻回犬 🐕 的铲屎官
+
+---
+
+工作之外，我通过运动保持长期专注力与身体状态：
+
+- 🏸 **羽毛球** —— 业余爱好者  
+- 🥊 **拳击** —— 初级训练阶段，以体能与技术基础为主  
+- 🎾 **网球** —— 正在向 **3.0 水平** 努力  
+
+同时也是一名 **法国斗牛犬 🐾 与金毛寻回犬 🐕 的铲屎官**
+
 
 ---
 
