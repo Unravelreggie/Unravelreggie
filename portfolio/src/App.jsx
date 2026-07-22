@@ -404,7 +404,7 @@ function AppContent() {
     );
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
-  }, []);
+  }, [language]);
 
   const activeQuality = qualityCopy[qualityMode];
 
@@ -632,8 +632,8 @@ function AppContent() {
             <p>{t("This is not a pivot away from one profession. It is a widening frame—from individual cognition to evidence systems that shape medical decisions.")}</p>
           </div>
           <div className="story-timeline">
-            {localizedStory.map((item) => (
-              <article key={`${item.year}-${item.title}`} data-reveal>
+            {localizedStory.map((item, index) => (
+              <article key={`story-${index}`} data-reveal>
                 <span>{item.year}</span>
                 <div>
                   <h3>{item.title}</h3>
