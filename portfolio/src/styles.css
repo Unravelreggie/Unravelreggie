@@ -9,6 +9,7 @@
 
 :root {
   color-scheme: dark;
+  --build-revision: 20260722;
   --ink: #090b0b;
   --ink-soft: #101414;
   --ink-raised: #171c1c;

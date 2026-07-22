@@ -205,7 +205,7 @@ function Header({ progress }) {
               {item.label}
             </button>
           ))}
-          <a href="/assets/Xiaoyuan_Zhang_CV.docx.pdf" target="_blank" rel="noreferrer">
+          <a href="/assets/Xiaoyuan_Zhang_CV_2026.pdf" target="_blank" rel="noreferrer">
             CV
           </a>
         </nav>
@@ -230,7 +230,7 @@ function Header({ progress }) {
               {item.label}
             </button>
           ))}
-          <a href="/assets/Xiaoyuan_Zhang_CV.docx.pdf" target="_blank" rel="noreferrer">
+          <a href="/assets/Xiaoyuan_Zhang_CV_2026.pdf" target="_blank" rel="noreferrer">
             View CV
           </a>
         </div>
@@ -387,7 +387,7 @@ function AppContent() {
               <button className="button button-primary" onClick={() => scrollToId("work")}>
                 Explore the evidence <ArrowRight size={18} />
               </button>
-              <a className="button button-secondary" href="/assets/Xiaoyuan_Zhang_CV.docx.pdf" target="_blank" rel="noreferrer">
+              <a className="button button-secondary" href="/assets/Xiaoyuan_Zhang_CV_2026.pdf" target="_blank" rel="noreferrer">
                 View CV <FileText size={18} />
               </a>
             </div>
