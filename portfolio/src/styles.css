@@ -179,7 +179,10 @@ a:focus-visible {
 .menu-button {
   display: none;
   border: 1px solid var(--line-dark);
+  padding: 9px;
   background: rgba(9, 11, 11, 0.82);
+  cursor: pointer;
+}
 
 .language-toggle {
   display: inline-flex;
@@ -209,9 +212,6 @@ a:focus-visible {
   color: rgba(236, 228, 215, 0.25);
   font-size: 0.7rem;
 }
-  padding: 9px;
-  cursor: pointer;
-}
 
 .mobile-menu {
   display: none;
@@ -231,6 +231,10 @@ a:focus-visible {
   padding: clamp(100px, 10vw, 160px) clamp(22px, 6.2vw, 100px);
 }
 
+main section[id] {
+  scroll-margin-top: 84px;
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
@@ -244,6 +248,9 @@ a:focus-visible {
 .hero-copy {
   position: relative;
   z-index: 2;
+  width: min(650px, 47vw);
+  padding: clamp(116px, 14vh, 160px) 0 310px clamp(28px, 4.6vw, 74px);
+}
 
 html[lang="zh-CN"] body {
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
@@ -256,9 +263,6 @@ html[lang="zh-CN"] .contact h2,
 html[lang="zh-CN"] h3 {
   font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
   letter-spacing: -0.02em;
-}
-  width: min(650px, 47vw);
-  padding: clamp(116px, 14vh, 160px) 0 310px clamp(28px, 4.6vw, 74px);
 }
 
 .kicker {
@@ -811,6 +815,190 @@ html[lang="zh-CN"] h3 {
   text-align: right;
 }
 
+.experience {
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+  background: #0b0e0e;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+
+.experience-card {
+  display: flex;
+  min-width: 0;
+  min-height: 475px;
+  flex-direction: column;
+  padding: clamp(26px, 3vw, 40px);
+  background: #101414;
+}
+
+.experience-card:nth-child(2n) {
+  background: #0e1212;
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--ember-bright);
+}
+
+.experience-card-top time {
+  color: #8f8a82;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+.experience-company {
+  min-height: 2.8em;
+  margin: 44px 0 9px;
+  color: #918d85;
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.07em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.experience-card h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.85rem, 2.4vw, 2.65rem);
+  font-weight: 500;
+  line-height: 1.02;
+  overflow-wrap: anywhere;
+}
+
+.experience-location {
+  margin: 10px 0 0;
+  color: var(--ember-bright);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.62rem;
+}
+
+.experience-summary {
+  margin: 24px 0 0;
+  color: #aaa69e;
+  font-size: 0.94rem;
+  font-weight: 300;
+  line-height: 1.58;
+}
+
+.experience-thread {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-dark);
+}
+
+.experience-thread span {
+  color: var(--ember-bright);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+}
+
+.experience-thread p {
+  margin: 9px 0 0;
+  color: #8e8a83;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.experience-tags,
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: auto 0 0;
+  padding: 28px 0 0;
+  list-style: none;
+}
+
+.experience-tags li,
+.interest-tags li {
+  padding: 6px 9px;
+  border: 1px solid rgba(236, 228, 215, 0.16);
+  color: #aaa69e;
+  font-size: 0.68rem;
+  overflow-wrap: anywhere;
+}
+
+.earlier-foundations {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+  gap: 1px;
+  margin-top: clamp(42px, 5vw, 70px);
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+
+.foundations-heading,
+.foundation-list {
+  background: #101414;
+}
+
+.foundations-heading {
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.foundations-heading > p {
+  margin: 0 0 18px;
+  color: var(--ember-bright);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.09em;
+}
+
+.foundations-heading h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.85rem, 2.8vw, 3rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.foundation-list article {
+  display: grid;
+  grid-template-columns: 54px minmax(180px, 0.78fr) minmax(0, 1.22fr);
+  gap: 22px;
+  padding: 26px 30px;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.foundation-list article:last-child {
+  border-bottom: 0;
+}
+
+.foundation-list time {
+  color: var(--ember-bright);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.65rem;
+}
+
+.foundation-list h4 {
+  margin: -4px 0 0;
+  color: var(--chalk);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.foundation-list p {
+  margin: 0;
+  color: #8f8b84;
+  font-size: 0.84rem;
+  line-height: 1.52;
+}
+
 .work {
   border-top: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
@@ -1120,6 +1308,92 @@ html[lang="zh-CN"] h3 {
   font-size: 0.69rem;
 }
 
+.off-hours {
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+  background: #0c0f0f;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+
+.interest-card {
+  display: flex;
+  min-width: 0;
+  min-height: 365px;
+  flex-direction: column;
+  padding: clamp(28px, 4vw, 48px);
+  background: #111515;
+}
+
+.interest-card--tennis,
+.interest-card--ai-coding {
+  grid-column: span 7;
+}
+
+.interest-card--movement,
+.interest-card--dogs {
+  grid-column: span 5;
+}
+
+.interest-card--dogs,
+.interest-card--ai-coding {
+  background: #151818;
+}
+
+.interest-card-top {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 12px;
+  color: var(--ember-bright);
+}
+
+.interest-card-top svg + svg {
+  color: #a9a49a;
+}
+
+.interest-eyebrow {
+  margin: 43px 0 10px;
+  color: #8f8a82;
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.09em;
+}
+
+.interest-card h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.35rem, 4vw, 4.25rem);
+  font-weight: 500;
+  line-height: 0.96;
+  overflow-wrap: anywhere;
+}
+
+.interest-fact {
+  margin: 16px 0 0;
+  color: var(--ember-bright);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.interest-body {
+  max-width: 650px;
+  margin: 21px 0 0;
+  color: #aaa69e;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
 .contact {
   display: flex;
   align-items: end;
@@ -1358,6 +1632,21 @@ html[lang="zh-CN"] h3 {
     width: min(720px, 100%);
   }
 
+  .experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .interest-card--tennis,
+  .interest-card--movement,
+  .interest-card--dogs,
+  .interest-card--ai-coding {
+    grid-column: span 6;
+  }
+
+  .earlier-foundations {
+    grid-template-columns: 1fr;
+  }
+
   .contact {
     align-items: flex-start;
     flex-direction: column;
@@ -1388,6 +1677,10 @@ html[lang="zh-CN"] h3 {
 
   .menu-button {
     display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    padding: 0;
   }
 
   .mobile-menu {
@@ -1396,6 +1689,8 @@ html[lang="zh-CN"] h3 {
     right: 0;
     display: none;
     width: min(320px, 88vw);
+    max-height: calc(100svh - 76px);
+    overflow-y: auto;
     padding: 17px;
     background: rgba(9, 11, 11, 0.97);
     border: 1px solid var(--line-dark);
@@ -1425,6 +1720,8 @@ html[lang="zh-CN"] h3 {
   }
 
   .mobile-menu .language-toggle button {
+    min-width: 48px;
+    min-height: 44px;
     border-bottom: 0;
     padding: 4px 0;
   }
@@ -1435,16 +1732,20 @@ html[lang="zh-CN"] h3 {
   }
 
   .hero-copy {
-    width: calc(100% - 28px);
-    margin: 94px 14px 0;
-    padding: 50px 22px 70px;
+    width: calc(100% - 24px);
+    margin: 94px 12px 0;
+    padding: 50px clamp(18px, 5.5vw, 22px) 70px;
     background: rgba(7, 9, 9, 0.82);
     border: 1px solid var(--line-dark);
     backdrop-filter: blur(8px);
   }
 
   .hero h1 {
-    font-size: clamp(4.8rem, 23vw, 7rem);
+    max-width: 100%;
+    font-size: clamp(3.4rem, 17vw, 5.4rem);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+    white-space: nowrap;
   }
 
   .hero h2 {
@@ -1459,11 +1760,36 @@ html[lang="zh-CN"] h3 {
     padding: 96px 21px;
   }
 
+  main section[id] {
+    scroll-margin-top: 76px;
+  }
+
   .origin-grid,
   .quality-console,
+  .experience-grid,
   .project-grid,
+  .interest-grid,
   .case-file-grid {
     grid-template-columns: 1fr;
+  }
+
+  .interest-card--tennis,
+  .interest-card--movement,
+  .interest-card--dogs,
+  .interest-card--ai-coding {
+    grid-column: 1 / -1;
+  }
+
+  .earlier-foundations {
+    grid-template-columns: 1fr;
+  }
+
+  .foundation-list article {
+    grid-template-columns: 54px minmax(0, 1fr);
+  }
+
+  .foundation-list article p {
+    grid-column: 2;
   }
 
   .quality-switch {
@@ -1512,6 +1838,47 @@ html[lang="zh-CN"] h3 {
 @media (max-width: 520px) {
   .hero {
     min-height: 980px;
+  }
+
+  .section-heading h2,
+  .future h2,
+  .contact h2 {
+    font-size: clamp(2.5rem, 12vw, 3.25rem);
+    line-height: 1.02;
+  }
+
+  .experience-card,
+  .interest-card {
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(22px, 6vw, 28px);
+  }
+
+  .experience-company {
+    min-height: 0;
+    margin-top: 34px;
+  }
+
+  .foundation-list article {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 24px;
+  }
+
+  .foundation-list article p {
+    grid-column: auto;
+  }
+
+  .contact-details > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  html[lang="zh-CN"] .section-number,
+  html[lang="zh-CN"] .experience-company,
+  html[lang="zh-CN"] .interest-eyebrow {
+    letter-spacing: 0.06em;
+    line-height: 1.5;
   }
 
   .hero-actions {

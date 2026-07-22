@@ -2,24 +2,32 @@ import { useEffect, useMemo, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
+  Barbell,
   Brain,
+  Briefcase,
+  Buildings,
   ChartLineUp,
   CheckCircle,
+  Code,
   Database,
+  Dog,
   FileText,
   GithubLogo,
   LinkedinLogo,
   List,
   MagnifyingGlass,
+  PersonSimpleSwim,
   ShieldCheck,
+  TennisBall,
   X,
 } from "@phosphor-icons/react";
 import { siteTitle, translateContent, translateText } from "./site-language.js";
 
 const navItems = [
+  { id: "experience", label: "Experience" },
   { id: "work", label: "Selected Work" },
-  { id: "lab", label: "Evidence Lab" },
   { id: "story", label: "Story" },
+  { id: "off-hours", label: "Off Hours" },
 ];
 
 const chapters = [
@@ -37,9 +45,9 @@ const chapters = [
   },
   {
     number: "03",
-    title: "Evidence in the real world",
-    detail: "Safety Science · RWD · GVP",
-    target: "work",
+    title: "Evidence in practice",
+    detail: "Research · Clinical · Data · Safety",
+    target: "experience",
   },
   {
     number: "04",
@@ -350,9 +358,12 @@ function AppContent() {
   const t = (text) => translateText(text, language);
   const localizedNavItems = useMemo(() => translateContent(navItems, language), [language]);
   const localizedChapters = useMemo(() => translateContent(chapters, language), [language]);
+  const localizedExperiences = useMemo(() => translateContent(experiences, language), [language]);
+  const localizedFoundations = useMemo(() => translateContent(earlierFoundations, language), [language]);
   const localizedProjects = useMemo(() => translateContent(projects, language), [language]);
   const localizedMethods = useMemo(() => translateContent(methods, language), [language]);
   const localizedStory = useMemo(() => translateContent(story, language), [language]);
+  const localizedInterests = useMemo(() => translateContent(interests, language), [language]);
   const selectedProject = localizedProjects.find((project) => project.id === selectedProjectId) ?? null;
 
 
@@ -565,9 +576,58 @@ function AppContent() {
           </div>
         </section>
 
+        <section id="experience" className="experience section-dark section-pad" aria-labelledby="experience-title">
+          <div className="section-heading light" data-reveal>
+            <p className="section-number">{t("ACT III / EVIDENCE IN PRACTICE")}</p>
+            <h2 id="experience-title">{t("Work changed the scale of the question.")}</h2>
+            <p>{t("Across research, clinical operations, medical data, and regulated safety systems, each role revealed another part of how evidence is generated, governed, and used. Pharmacovigilance is one domain in that broader path.")}</p>
+          </div>
+          <div className="experience-grid">
+            {localizedExperiences.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="experience-card" key={item.id} data-reveal>
+                  <div className="experience-card-top">
+                    <Icon size={26} weight="light" aria-hidden="true" />
+                    <time>{item.period}</time>
+                  </div>
+                  <p className="experience-company">{item.company}</p>
+                  <h3>{item.role}</h3>
+                  <p className="experience-location">{item.location}</p>
+                  <p className="experience-summary">{item.summary}</p>
+                  <div className="experience-thread">
+                    <span>{t("PATH THREAD")}</span>
+                    <p>{item.path}</p>
+                  </div>
+                  <ul className="experience-tags" aria-label={t("Key capabilities")}>
+                    {item.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+          <div className="earlier-foundations" data-reveal>
+            <div className="foundations-heading">
+              <p>{t("EARLIER FOUNDATIONS")}</p>
+              <h3>{t("Research, communication, and cross-cultural coordination came first.")}</h3>
+            </div>
+            <div className="foundation-list">
+              {localizedFoundations.map((item) => (
+                <article key={item.id}>
+                  <time>{item.year}</time>
+                  <h4>{item.title}</h4>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="work" className="work section-dark section-pad">
           <div className="section-heading light" data-reveal>
-            <p className="section-number">{t("ACT III / EVIDENCE IN THE REAL WORLD")}</p>
+            <p className="section-number">{t("CASE FILES / SELECTED EVIDENCE SYSTEMS")}</p>
             <h2>{t("Selected evidence systems.")}</h2>
             <p>{t("The work is organized by the evidence problem it solves—not by a list of tools. Open a case file to see the question, method, validation logic, and maturity.")}</p>
           </div>
@@ -686,6 +746,37 @@ function AppContent() {
           </div>
         </section>
 
+        <section id="off-hours" className="off-hours section-dark section-pad" aria-labelledby="off-hours-title">
+          <div className="section-heading light" data-reveal>
+            <p className="section-number">{t("OFF HOURS / THE HUMAN SIDE")}</p>
+            <h2 id="off-hours-title">{t("Still testing, training, and paying attention.")}</h2>
+            <p>{t("Sport, companionship, and small experiments keep curiosity physical, practical, and personal.")}</p>
+          </div>
+          <div className="interest-grid">
+            {localizedInterests.map((item) => {
+              const Icon = item.icon;
+              const SecondaryIcon = item.secondaryIcon;
+              return (
+                <article className={`interest-card interest-card--${item.id}`} key={item.id} data-reveal>
+                  <div className="interest-card-top" aria-hidden="true">
+                    <Icon size={30} weight="light" />
+                    {SecondaryIcon ? <SecondaryIcon size={25} weight="light" /> : null}
+                  </div>
+                  <p className="interest-eyebrow">{item.eyebrow}</p>
+                  <h3>{item.title}</h3>
+                  <p className="interest-fact">{item.fact}</p>
+                  <p className="interest-body">{item.body}</p>
+                  <ul className="interest-tags" aria-label={t("Details")}>
+                    {item.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="contact section-dark">
           <div>
             <p className="section-number">{t("EPILOGUE / CONTINUE THE THREAD")}</p>
@@ -729,3 +820,151 @@ function AppContent() {
 export function App() {
   return <AppContent />;
 }
+const experiences = [
+  {
+    id: "sinovac",
+    period: "06/2025 – Present",
+    company: "Sinovac Biotech Group Co., Ltd.",
+    role: "International Pharmacovigilance Administrator",
+    location: "Beijing / Chengdu, China",
+    summary:
+      "Interpret GVP requirements across international markets; coordinate PVA/SDEA, vendors, audits, and periodic-report support; and contribute to workflow automation and structured data infrastructure for global vaccine safety.",
+    path:
+      "Made the real constraints behind post-market evidence visible: regulation, accountability, data quality, and cross-market coordination.",
+    tags: ["Global safety operations", "GVP quality", "Workflow systems"],
+    icon: ShieldCheck,
+  },
+  {
+    id: "miami-brain",
+    period: "08/2023 – 05/2025",
+    company: "University of Miami · BRAIN Group",
+    role: "Graduate Research Assistant",
+    location: "Miami, USA",
+    summary:
+      "Studied anxiety and executive function through behavioral tasks, fMRI, ECG, random forest, linear mixed models, and hierarchical drift diffusion modeling, while supporting data quality and research-assistant training.",
+    path:
+      "Connected questions about human decision-making to measurable, uncertainty-aware models.",
+    tags: ["Computational psychiatry", "fMRI & ECG", "HDDM / HSSM"],
+    icon: Brain,
+  },
+  {
+    id: "medchemexpress",
+    period: "01/2023 – 08/2023",
+    company: "MedChemExpress LLC",
+    role: "Operations Associate",
+    location: "New Jersey, USA",
+    summary:
+      "Managed 80+ daily cases for a biomedical research-material supplier, coordinating logistics and trade-compliance solutions among clients, agents, vendors, and researchers.",
+    path:
+      "Revealed the operational network that enables biomedical research.",
+    tags: ["Biomedical research", "Cross-border operations", "Researcher support"],
+    icon: Buildings,
+  },
+  {
+    id: "cb-payments",
+    period: "10/2022 – 12/2022",
+    company: "CB Payments LLC",
+    role: "Data Analyst Intern",
+    location: "Remote, USA",
+    summary:
+      "Applied NLP, data capture, and cleaning to prostate-cancer case reports, alongside literature and patent research on medical-language applications.",
+    path:
+      "Created a direct bridge between computational methods and disease-specific medical data.",
+    tags: ["Medical NLP", "Case reports", "Data cleaning"],
+    icon: Code,
+  },
+  {
+    id: "hopkins-medtech",
+    period: "01/2022 – 09/2022",
+    company: "Hopkins MedTech Compliance LLC",
+    role: "Clinical Research Associate",
+    location: "New Jersey, USA",
+    summary:
+      "Led a 10-person data-entry team supporting 300+ participant records daily, analyzed COVID-19 test sensitivity and specificity, and supervised FDA-aligned site execution.",
+    path:
+      "Placed me inside the clinical data-generating process, where protocol execution and data quality are inseparable.",
+    tags: ["Clinical research", "Diagnostic data", "FDA-aligned conduct"],
+    icon: Briefcase,
+  },
+  {
+    id: "deloitte",
+    period: "06/2019 – 08/2019",
+    company: "Deloitte Consulting Shanghai",
+    role: "Business Analyst Intern",
+    location: "Beijing, China",
+    summary:
+      "Used Excel-based analysis for city-level salary normalization and financial-report review, and supported the design of an international management-trainee program.",
+    path:
+      "Built an early habit of structuring ambiguous organizational questions for decisions.",
+    tags: ["Business analytics", "Excel visualization", "Cross-functional work"],
+    icon: ChartLineUp,
+  },
+];
+
+const earlierFoundations = [
+  {
+    id: "bit-research",
+    year: "2018",
+    title: "Beijing Institute of Technology · Research Assistant",
+    detail:
+      "Behavioral-science research in data cleaning, SPSS analysis, report development, and study interpretation; later connected to a co-authored multilevel study published in 2019.",
+  },
+  {
+    id: "pea-teaching",
+    year: "2018",
+    title: "PEA International Summer School · Teaching Assistant",
+    detail:
+      "Supported international-course delivery, faculty coordination, classroom organization, and student logistics at Beihang University.",
+  },
+  {
+    id: "new-oriental",
+    year: "2017",
+    title: "New Oriental · Teaching Assistant",
+    detail:
+      "Supported English learning, student progress tracking, and communication among students, parents, and teachers.",
+  },
+];
+
+const interests = [
+  {
+    id: "tennis",
+    eyebrow: "PLAY / ITERATE",
+    title: "Tennis Lab",
+    fact: "NTRP 3.0",
+    body:
+      "I rotate between two distinct setups: the precision and connected feedback of a Wilson Pro Staff 97 v14 (315 g), and the faster, spin-oriented Babolat Pure Aero 98 (305 g).",
+    tags: ["Wilson Pro Staff 97 v14 · 315 g", "Babolat Pure Aero 98 · 305 g"],
+    icon: TennisBall,
+  },
+  {
+    id: "movement",
+    eyebrow: "MOVE / RESET",
+    title: "Swimming & Strength",
+    fact: "Rhythm · Endurance · Progression",
+    body:
+      "Swimming develops rhythm and endurance; strength training adds structure and progressive work. Both reset attention away from the screen.",
+    tags: ["Swimming", "Strength training"],
+    icon: PersonSimpleSwim,
+    secondaryIcon: Barbell,
+  },
+  {
+    id: "dogs",
+    eyebrow: "COMPANIONS / DAILY LIFE",
+    title: "Chacha & Rocky",
+    fact: "Golden Retriever · French Bulldog",
+    body:
+      "Chacha, a Golden Retriever, and Rocky, a French Bulldog, bring companionship and a different rhythm to daily life.",
+    tags: ["Chacha · Golden Retriever", "Rocky · French Bulldog"],
+    icon: Dog,
+  },
+  {
+    id: "ai-coding",
+    eyebrow: "BUILD / TEST",
+    title: "AI Coding Playground",
+    fact: "Small prototypes · New tools",
+    body:
+      "In spare time I test AI-assisted coding workflows, build small prototypes, and explore where models accelerate iteration—and where human verification still matters.",
+    tags: ["AI-assisted coding", "Rapid prototyping", "Human verification"],
+    icon: Code,
+  },
+];

@@ -17,3 +17,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The 2021–2023 chapter is a necessary bridge: clinical research operations, diagnostic-test data work, prostate-cancer case NLP, and biomedical research-material operations led from theory toward medical data analysis.
 - Do not present Medical Affairs as a current, prior, or target field on this site. Keep future positioning centered on RWE, pharmacoepidemiology, Safety Science, Clinical Data Science, medical data analytics, and intelligent health systems.
 - The site is English-first and should help global recruiters understand the positioning within 30–60 seconds.
+- A dedicated Experience chapter uses factual role cards to connect research, clinical operations, medical data, and regulated safety work without turning the site into a CV wall.
+- An Off Hours chapter presents tennis (NTRP 3.0 and the two specified racquets), swimming, strength training, Chacha and Rocky, and AI-assisted coding as authentic personal context.
+- Every new navigation label, heading, card, annotation, and aria label must support English and Simplified Chinese with stable language-independent item IDs.
+- The mobile UNRAVEL hero title must remain fully visible without horizontal overflow at 320–430 px viewport widths.
