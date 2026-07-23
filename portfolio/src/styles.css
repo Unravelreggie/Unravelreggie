@@ -854,8 +854,29 @@ html[lang="zh-CN"] h3 {
   font-weight: 500;
   line-height: 1;
 }
+.project-card > .project-role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  align-items: baseline;
+  margin: 0 0 20px;
+  color: var(--chalk);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
 
-.project-card > p:not(.project-eyebrow) {
+.project-role span {
+  color: var(--ember-bright);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+}
+
+.project-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.project-card > p:not(.project-eyebrow):not(.project-role) {
   max-width: 565px;
   margin: 0;
   color: #9f9b94;
@@ -1322,6 +1343,23 @@ html[lang="zh-CN"] h3 {
   font-size: clamp(2.6rem, 5vw, 5rem);
   font-weight: 500;
   line-height: 0.95;
+}
+.dialog-heading > .dialog-role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: baseline;
+  margin: 0 0 17px;
+  color: var(--chalk);
+  font-family: "IBM Plex Mono", "Microsoft YaHei", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0;
+}
+
+.dialog-role span {
+  color: var(--ember-bright);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
 }
 
 .status-pill {

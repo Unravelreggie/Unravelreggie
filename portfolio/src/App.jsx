@@ -24,83 +24,126 @@ import { siteTitle, translateContent, translateText } from "./site-language.js";
 
 const navItems = [
   { id: "experience", label: "Experience" },
-  { id: "work", label: "Selected Work" },
+  { id: "work", label: "Current Projects" },
   { id: "story", label: "Story" },
   { id: "off-hours", label: "Off Hours" },
 ];
 
 const projects = [
   {
-    id: "clinical-quality",
-    eyebrow: "CAPTURE → VALIDATE",
-    title: "Clinical Follow-up & SDV Assurance",
+    id: "vaccine-modeling",
+    eyebrow: "PREDICT → INFER",
+    title: "Multi-Vaccine Clinical Modeling & Statistical Inference",
     summary:
-      "A local-first workflow that converts scanned follow-up records into structured review data and flags identity or visit-date inconsistencies before manual SDV.",
-    tags: ["OCR", "Clinical data", "Quality control"],
-    maturity: "Internal prototype",
-    icon: MagnifyingGlass,
-    question:
-      "How can a clinical team review high-volume paper records without losing source traceability or missing mismatches between the record and the scheduled subject visit?",
-    method:
-      "Batch OCR, field extraction, rule-based comparison, exception routing, and a reviewer-facing audit trail. The workflow keeps the original page adjacent to every extracted field.",
-    validation:
-      "Tested against a manually reviewed sample with separate checks for subject identity, visit date, field completeness, and extraction confidence. Disagreements remain visible rather than being silently overwritten.",
-    value:
-      "Moves review effort toward ambiguous records while preserving human sign-off and the source-data relationship required in a GCP environment.",
-  },
-  {
-    id: "safety-reporting",
-    eyebrow: "STRUCTURE → ANALYZE",
-    title: "Safety Data & Periodic Reporting",
-    summary:
-      "Reusable deduplication, seriousness logic, and summary-table workflows for safety datasets used in periodic review and reporting support.",
-    tags: ["Safety analytics", "PSUR / PBRER", "Python"],
-    maturity: "Internal toolset",
+      "An active, multi-stage analysis program that predicts post-immunization response levels and examines how they relate to other clinical outcomes.",
+    tags: ["LASSO · RF · XGBoost", "ANCOVA · SEM · Bayesian", "Active analysis"],
+    maturity: "Active · iterative modeling",
     icon: ChartLineUp,
+    role: "Primary Analyst",
     question:
-      "How can recurring safety reviews become more reproducible when quarterly files, historical cases, and reporting structures arrive in inconsistent forms?",
+      "Which baseline and study variables help predict post-immunization response, and how should relationships with other outcomes be estimated without confusing prediction with inference?",
     method:
-      "Canonical event keys, structured reconciliation states, repeatable table-generation logic, and explicit handling for severity, time windows, and unmatched records.",
+      "Stage-gated exploratory analysis followed by LASSO, regression, random forest, and gradient-boosted trees for prediction; ANCOVA, structural equation modeling, and Bayesian models for statistical inference.",
+    ownership:
+      "I lead exploratory analysis, outcome and feature framing, model implementation, diagnostic review, and synthesis of findings across successive vaccine datasets.",
+    collaboration:
+      "A programming lead coordinates experiment execution, statistical leadership sets milestones, and a statistician independently checks test outputs with me.",
     validation:
-      "Outputs are compared with source counts and prior manual summaries; exceptions are surfaced for review. The system separates exact matches, partial matches, and new records.",
+      "Predictive performance, calibration, assumptions, sensitivity analyses, and agreement across modeling approaches are reviewed separately. Results remain qualified until professional review is complete.",
     value:
-      "Creates a more auditable evidence trail for periodic safety review while reducing repetitive transformation work.",
+      "Connects practical prediction with interpretable inference so that model performance and scientific meaning are evaluated as different, complementary questions.",
   },
   {
-    id: "global-rwd",
-    eyebrow: "GOVERN → CONNECT",
-    title: "Global Safety Data Foundation",
+    id: "cross-regulatory-safety",
+    eyebrow: "HARMONIZE → SIGNAL",
+    title: "Cross-Regulatory Post-Market Safety Data & Signal Analytics",
     summary:
-      "A developing cross-market data foundation designed to connect distribution context, adverse-event information, regulatory status, and downstream comparative analysis.",
-    tags: ["RWD foundation", "Data governance", "In progress"],
-    maturity: "In progress",
+      "A harmonized ADR data foundation spanning FDA, EMA, PMDA, and Health Canada sources, built for reproducible descriptive and signal-oriented analysis.",
+    tags: ["FDA · EMA · PMDA · Health Canada", "RWD engineering", "Signal analytics"],
+    maturity: "Active · database & analysis",
     icon: Database,
+    role: "Primary Data Developer & Analyst",
     question:
-      "What data structure is needed before global post-market information can support reliable comparison rather than isolated operational reporting?",
+      "How can heterogeneous spontaneous-reporting systems be aligned well enough to compare reporting patterns and support product-focused signal review?",
     method:
-      "Common identifiers, data dictionaries, provenance fields, country and product mappings, quality rules, and a staged path from operational records to analysis-ready datasets.",
+      "Full-source ingestion, shared field definitions, terminology and product mappings, provenance tracking, reproducible transformations, descriptive analysis, and cross-source signal views.",
+    ownership:
+      "I designed and built the database, harmonization workflow, analytical layer, and visualization structure, and I lead the ongoing product-focused analyses.",
+    collaboration:
+      "PV risk leadership aligns the analytical output and signal-review dimensions; the QPPV reviews visualization standards, data dimensions, and product-level framing.",
     validation:
-      "Quality gates are being defined around completeness, duplicate detection, temporal consistency, source coverage, and reproducible transformations.",
+      "Source counts, field completeness, duplicate logic, terminology mappings, time consistency, and reproducible outputs are checked by market. Reporting patterns are not presented as incidence or causal effects.",
     value:
-      "Builds the prerequisite for future pharmacoepidemiology and RWE work without presenting an unfinished database as completed evidence.",
+      "Creates a common analytical foundation for cross-market pharmacovigilance while keeping source limitations and expert signal assessment visible.",
   },
   {
-    id: "regulatory-intelligence",
-    eyebrow: "INTERPRET → ACT",
-    title: "Regulatory Intelligence & Evidence Workflows",
+    id: "meddra-operations",
+    eyebrow: "RETRIEVE → REVIEW",
+    title: "Multilingual MedDRA Coding Assistance & PV Operations Data",
     summary:
-      "A knowledge and workflow layer that links regulations, safety agreements, lifecycle triggers, and accountable actions across international markets.",
-    tags: ["Regulatory intelligence", "RAG", "Workflow design"],
-    maturity: "Prototype / operational design",
-    icon: FileText,
+      "A trilingual English–Chinese–Japanese assistance layer that ranks likely MedDRA PT and LLT candidates from physician narratives and supports aligned PV data workflows.",
+    tags: ["MedDRA PT / LLT", "Vector retrieval", "EN · 中文 · 日本語"],
+    maturity: "Active · co-development",
+    icon: Code,
+    role: "Co-developer with Programming Lead",
     question:
-      "How can complex GVP obligations remain searchable, traceable, and connected to the agreements and operational events they should trigger?",
+      "How can multilingual medical narratives be converted into fast, reviewable terminology candidates without replacing qualified coding judgment?",
     method:
-      "Structured regulatory sources, retrievable evidence chunks, agreement-field extraction, lifecycle triggers, and human confirmation for legal or medical interpretation.",
+      "Language-aware text processing, semantic vector retrieval, ranked PT and LLT candidates, side-by-side terminology comparison, and bilingual web-function translation and alignment.",
+    ownership:
+      "I co-develop the retrieval logic, terminology comparison workflow, PV operations data handling, and the multilingual web experience.",
+    collaboration:
+      "The programming lead and I develop the system together; qualified reviewers retain final confirmation of every coding decision.",
     validation:
-      "Source links and retrieved passages remain available for verification. High-impact conclusions are treated as assisted analysis, not autonomous compliance decisions.",
+      "Candidate rankings are evaluated against reviewer-confirmed examples, with source text and alternatives kept visible. The tool assists selection; it does not autonomously assign regulated codes.",
     value:
-      "Turns fragmented regulatory reading into a maintainable evidence and action system while keeping professional judgment in the loop.",
+      "Reduces repetitive terminology search while preserving traceability, multilingual context, and human accountability.",
+  },
+  {
+    id: "international-gvp",
+    eyebrow: "SOURCE → MAP",
+    title: "International GVP Regulatory Intelligence & Requirement Mapping",
+    summary:
+      "Independent, source-grounded analysis that maps ICH, regional, and national pharmacovigilance requirements into traceable operational interpretations.",
+    tags: ["ICH & regional frameworks", "Requirement mapping", "Source traceability"],
+    maturity: "Active · independent analysis",
+    icon: FileText,
+    role: "Independent Regulatory Intelligence Analyst",
+    question:
+      "How can changing GVP expectations across Asia, Europe, the Middle East, Africa, and Latin America be compared without losing source context or jurisdictional differences?",
+    method:
+      "Primary-source retrieval, versioned evidence records, requirement decomposition, jurisdictional comparison, trigger mapping, and bilingual interpretation for operational use.",
+    ownership:
+      "I independently conduct the regulatory research, source assessment, requirement mapping, comparative analysis, and written interpretation.",
+    collaboration:
+      "High-impact interpretations are escalated to the relevant medical, legal, quality, or local-market professionals before operational adoption.",
+    validation:
+      "Every material interpretation remains linked to its source and effective context. The work supports professional review and does not make autonomous legal or compliance decisions.",
+    value:
+      "Turns fragmented regulatory reading into a maintainable comparison layer that helps teams identify obligations, differences, and follow-up questions.",
+  },
+  {
+    id: "clinical-sdv",
+    eyebrow: "EXTRACT → RECONCILE",
+    title: "Clinical SDV Consistency Review System",
+    summary:
+      "An end-to-end review workflow that converts source documents into traceable fields, applies consistency rules, routes exceptions, and supports reviewer feedback during pilot use.",
+    tags: ["OCR & extraction", "Consistency logic", "Human review"],
+    maturity: "Pilot · user acceptance testing",
+    icon: MagnifyingGlass,
+    role: "End-to-End System Developer",
+    question:
+      "How can source-data verification focus attention on meaningful inconsistencies while preserving direct access to the original record and clinical context?",
+    method:
+      "Document processing, field extraction, configurable consistency rules, exception routing, a reviewer-facing interface, deployment, and iterative refinement.",
+    ownership:
+      "I implement the complete workflow—from source-document processing and review logic to the interface, deployment, testing support, and ongoing iteration.",
+    collaboration:
+      "CRA colleagues define clinical review requirements and business rules; I translate those requirements into the operating system and refine it with their feedback.",
+    validation:
+      "The system is being tested by business users against review scenarios. Exceptions remain visible for manual assessment, and workflow changes are versioned through feedback cycles.",
+    value:
+      "Creates a traceable bridge between source documents, consistency checks, and human SDV decisions without presenting automation as clinical judgment.",
   },
 ];
 
@@ -269,6 +312,10 @@ function ProjectDialog({ project, onClose, t }) {
           <Icon size={28} weight="light" />
           <p>{project.eyebrow}</p>
           <h2 id="dialog-title">{project.title}</h2>
+          <p className="dialog-role">
+            <span>{t("MY ROLE")}</span>
+            {project.role}
+          </p>
           <span className="status-pill">{project.maturity}</span>
         </div>
         <div className="case-file-grid">
@@ -281,11 +328,19 @@ function ProjectDialog({ project, onClose, t }) {
             <p>{project.method}</p>
           </section>
           <section>
-            <span>{t("03 / VALIDATION")}</span>
+            <span>{t("03 / WHAT I OWN")}</span>
+            <p>{project.ownership}</p>
+          </section>
+          <section>
+            <span>{t("04 / COLLABORATION")}</span>
+            <p>{project.collaboration}</p>
+          </section>
+          <section>
+            <span>{t("05 / VALIDATION & GOVERNANCE")}</span>
             <p>{project.validation}</p>
           </section>
           <section>
-            <span>{t("04 / EVIDENCE VALUE")}</span>
+            <span>{t("06 / EVIDENCE VALUE")}</span>
             <p>{project.value}</p>
           </section>
         </div>
@@ -531,9 +586,9 @@ function AppContent() {
 
         <section id="work" className="work section-dark section-pad">
           <div className="section-heading light" data-reveal>
-            <p className="section-number">{t("CASE FILES / SELECTED EVIDENCE SYSTEMS")}</p>
-            <h2>{t("Selected evidence systems.")}</h2>
-            <p>{t("The work is organized by the evidence problem it solves—not by a list of tools. Open a case file to see the question, method, validation logic, and maturity.")}</p>
+            <p className="section-number">{t("CURRENT WORK / ACTIVE EVIDENCE SYSTEMS")}</p>
+            <h2>{t("Current projects, with ownership made visible.")}</h2>
+            <p>{t("These active projects connect clinical modeling, post-market data, terminology systems, regulatory intelligence, and source-data quality. Open a case file to see my role, methods, collaborators, and governance boundaries.")}</p>
           </div>
           <div className="project-grid">
             {localizedProjects.map((project) => {
@@ -546,6 +601,10 @@ function AppContent() {
                   </div>
                   <p className="project-eyebrow">{project.eyebrow}</p>
                   <h3>{project.title}</h3>
+                  <p className="project-role">
+                    <span>{t("MY ROLE")}</span>
+                    {project.role}
+                  </p>
                   <p>{project.summary}</p>
                   <div className="tag-row">
                     {project.tags.map((tag) => (
@@ -559,7 +618,7 @@ function AppContent() {
               );
             })}
           </div>
-          <p className="work-note" data-reveal>{t("Selected work reflects direct contributions and active development. Sensitive records and internal results are intentionally omitted.")}</p>
+          <p className="work-note" data-reveal>{t("Public-safe project summaries: specific products, internal identifiers, confidential operational details, patient-level data, and unpublished results are intentionally omitted.")}</p>
         </section>
 
         <section id="lab" className="lab section-paper section-pad">
