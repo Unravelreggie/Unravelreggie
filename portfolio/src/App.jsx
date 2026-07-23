@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
 import {
-  ArrowDown,
   ArrowRight,
   Barbell,
   Brain,
@@ -28,33 +27,6 @@ const navItems = [
   { id: "work", label: "Selected Work" },
   { id: "story", label: "Story" },
   { id: "off-hours", label: "Off Hours" },
-];
-
-const chapters = [
-  {
-    number: "01",
-    title: "How do we know?",
-    detail: "Computational psychiatry · HDDM · fMRI",
-    target: "origin",
-  },
-  {
-    number: "02",
-    title: "How do we measure?",
-    detail: "Biostatistics · Epidemiology · GCP",
-    target: "quality",
-  },
-  {
-    number: "03",
-    title: "Evidence in practice",
-    detail: "Research · Clinical · Data · Safety",
-    target: "experience",
-  },
-  {
-    number: "04",
-    title: "Where can this go?",
-    detail: "RWE · Clinical Data Science · Intelligent systems",
-    target: "future",
-  },
 ];
 
 const projects = [
@@ -266,24 +238,6 @@ function Header({ progress, language, onLanguageChange, items, t }) {
   );
 }
 
-function ChapterIndex({ items, label }) {
-  return (
-    <aside className="chapter-index" aria-label={label}>
-      {items.map((chapter) => (
-        <button key={chapter.number} onClick={() => scrollToId(chapter.target)}>
-          <span className="chapter-dot" aria-hidden="true" />
-          <span className="chapter-copy">
-            <strong>
-              {chapter.number} / {chapter.title}
-            </strong>
-            <small>{chapter.detail}</small>
-          </span>
-        </button>
-      ))}
-    </aside>
-  );
-}
-
 function ProjectDialog({ project, onClose, t }) {
   useEffect(() => {
     if (!project) return undefined;
@@ -357,7 +311,6 @@ function AppContent() {
 
   const t = (text) => translateText(text, language);
   const localizedNavItems = useMemo(() => translateContent(navItems, language), [language]);
-  const localizedChapters = useMemo(() => translateContent(chapters, language), [language]);
   const localizedExperiences = useMemo(() => translateContent(experiences, language), [language]);
   const localizedFoundations = useMemo(() => translateContent(earlierFoundations, language), [language]);
   const localizedProjects = useMemo(() => translateContent(projects, language), [language]);
@@ -443,60 +396,11 @@ function AppContent() {
               </a>
             </div>
           </div>
-          <ChapterIndex items={localizedChapters} label={t("Narrative chapters")} />
-          <div className="hero-proof-strip" aria-label={t("Evidence system preview")}>
-            <button className="proof-card audit-preview" onClick={() => scrollToId("work")}>
-              <span className="proof-label">{t("AUDIT TRAIL")}</span>
-              <ul>
-                <li>
-                  <CheckCircle size={14} weight="fill" /> {t("Source captured")}
-                </li>
-                <li>
-                  <CheckCircle size={14} weight="fill" /> {t("Identity & date checks")}
-                </li>
-                <li>
-                  <CheckCircle size={14} weight="fill" /> {t("Exceptions reviewed")}
-                </li>
-                <li>
-                  <CheckCircle size={14} weight="fill" /> {t("Human sign-off")}
-                </li>
-              </ul>
-              <strong>{t("Traceable. Reproducible. Trustworthy.")}</strong>
-            </button>
-            <button className="proof-card lifecycle-preview" onClick={() => scrollToId("quality")}>
-              <span className="proof-label">{t("QUALITY FRAMEWORKS")}</span>
-              <div className="lifecycle-pair">
-                <span>
-                  <b>GCP</b>
-                  {t("Designed evidence")}
-                </span>
-                <span>
-                  <b>GVP</b>
-                  {t("Living evidence")}
-                </span>
-              </div>
-              <strong>{t("One evidence lifecycle")}</strong>
-            </button>
-            <button className="proof-card system-preview" onClick={() => scrollToId("future")}>
-              <span className="proof-label">{t("INTELLIGENT HEALTH SYSTEM")}</span>
-              <div className="system-flow">
-                <span>{t("Clinical · RWD · Safety")}</span>
-                <span>{t("Govern · Model · Validate")}</span>
-                <span>{t("Evidence · Decisions")}</span>
-              </div>
-              <strong>
-                {t("Evidence before automation")} <ArrowRight size={15} />
-              </strong>
-            </button>
-          </div>
-          <button className="scroll-cue" onClick={() => scrollToId("origin")} aria-label={t("Continue to research origin")}>
-            {t("Continue the thread")} <ArrowDown size={18} />
-          </button>
         </section>
 
         <section id="origin" className="origin section-dark section-pad">
           <div className="section-heading light" data-reveal>
-            <p className="section-number">{t("ACT I / HOW DO WE KNOW?")}</p>
+            <p className="section-number">{t("RESEARCH FOUNDATIONS / HOW DO WE KNOW?")}</p>
             <h2>{t("Before evidence becomes a system, it begins as a question.")}</h2>
             <p>{t("My research path began with how people perceive, decide, and behave—then moved toward the latent processes that cannot be observed directly.")}</p>
           </div>
@@ -534,7 +438,7 @@ function AppContent() {
         <section id="quality" className="quality section-paper section-pad">
           <div className="paper-inner">
             <div className="section-heading dark" data-reveal>
-              <p className="section-number">{t("ACT II / HOW DO WE MEASURE?")}</p>
+              <p className="section-number">{t("EVIDENCE QUALITY / HOW DO WE MEASURE?")}</p>
               <h2>{t("Evidence quality across the product lifecycle.")}</h2>
               <p>{t("Analysis is only as credible as the system that generated the data. GCP and GVP are not acronyms in a skills list—they are two connected quality environments.")}</p>
             </div>
@@ -578,7 +482,7 @@ function AppContent() {
 
         <section id="experience" className="experience section-dark section-pad" aria-labelledby="experience-title">
           <div className="section-heading light" data-reveal>
-            <p className="section-number">{t("ACT III / EVIDENCE IN PRACTICE")}</p>
+            <p className="section-number">{t("EXPERIENCE / EVIDENCE IN PRACTICE")}</p>
             <h2 id="experience-title">{t("Work changed the scale of the question.")}</h2>
             <p>{t("Across research, clinical operations, medical data, and regulated safety systems, each role revealed another part of how evidence is generated, governed, and used. Pharmacovigilance is one domain in that broader path.")}</p>
           </div>
@@ -661,7 +565,7 @@ function AppContent() {
         <section id="lab" className="lab section-paper section-pad">
           <div className="paper-inner lab-inner">
             <div className="section-heading dark" data-reveal>
-              <p className="section-number">{t("EVIDENCE LAB / METHODS IN MOTION")}</p>
+              <p className="section-number">{t("METHODS / HOW I WORK")}</p>
               <h2>{t("Model the process, not only the outcome.")}</h2>
               <p>{t("My method stack spans statistical inference, computational models, and pragmatic data systems. The common thread is a preference for assumptions that can be examined and results that can be challenged.")}</p>
             </div>
@@ -687,7 +591,7 @@ function AppContent() {
 
         <section id="story" className="story section-dark section-pad">
           <div className="section-heading light" data-reveal>
-            <p className="section-number">{t("DIRECTOR’S NOTES / THE EVIDENCE THREAD")}</p>
+            <p className="section-number">{t("CAREER PATH / THE EVIDENCE THREAD")}</p>
             <h2>{t("One question, changing scales.")}</h2>
             <p>{t("This is not a pivot away from one profession. It is a widening frame—from individual cognition to evidence systems that shape medical decisions.")}</p>
           </div>
@@ -706,7 +610,7 @@ function AppContent() {
 
         <section id="future" className="future section-pad">
           <div className="future-copy" data-reveal>
-            <p className="section-number">{t("ACT IV / WHERE THIS CAN GO")}</p>
+            <p className="section-number">{t("NEXT / WHERE THIS CAN GO")}</p>
             <h2>{t("From medical questions to decision-ready evidence.")}</h2>
             <p>{t("I am building toward roles where biostatistics, clinical and real-world data, pharmacoepidemiology, Safety Science, and technology support better medical decisions—from rigorous analysis to evidence systems that can operate in regulated environments.")}</p>
             <div className="future-fields" aria-label={t("Target fields")}>
@@ -779,7 +683,7 @@ function AppContent() {
 
         <section className="contact section-dark">
           <div>
-            <p className="section-number">{t("EPILOGUE / CONTINUE THE THREAD")}</p>
+            <p className="section-number">{t("CONTACT / KEEP IN TOUCH")}</p>
             <h2>{t("Complexity is where the work begins.")}</h2>
             <p>{t("Xiaoyuan “Reginald” Zhang · 张潇远 · Biostatistics · Medical Evidence · Intelligent Health Systems")}</p>
             <address className="contact-details">

@@ -21,3 +21,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - An Off Hours chapter presents tennis (NTRP 3.0 and the two specified racquets), swimming, strength training, Chacha and Rocky, and AI-assisted coding as authentic personal context.
 - Every new navigation label, heading, card, annotation, and aria label must support English and Simplified Chinese with stable language-independent item IDs.
 - The mobile UNRAVEL hero title must remain fully visible without horizontal overflow at 320–430 px viewport widths.
+- Keep the landing screen direct and readable: identity, positioning, and primary actions come first. Preserve the dark cinematic brand, but avoid stacked teaser cards, floating chapter indexes, and theatrical labels that compete with the introduction.
+- Simplified Chinese copy must read as native professional writing that preserves the English meaning; prefer natural sentence rhythm and context over literal word-for-word translation.
