@@ -2,7 +2,7 @@
 
 ### From human decisions to medical evidence systems
 
-[Website](https://unravel-xiaoyuan.pages.dev/) · [GitHub](https://github.com/Unravelreggie) · [Email](mailto:reggiezhang9719@gmail.com) · [CV](https://unravel-xiaoyuan.pages.dev/assets/Xiaoyuan_Zhang_CV_2026_EN.pdf)
+[Website](https://unravelreggie.github.io/) · [GitHub](https://github.com/Unravelreggie) · [Email](mailto:reggiezhang9719@gmail.com) · [CV](https://unravelreggie.github.io/assets/Xiaoyuan_Zhang_CV_2026_EN.pdf?v=20260915)
 
 I work where behavioral science, biostatistics, and regulated medical data meet. My focus is practical: make complex evidence workflows easier to apply, inspect, and improve while keeping qualified people responsible for interpretation and decisions.
 
