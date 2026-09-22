@@ -26,6 +26,8 @@ These are active practices, not claims of automated medical, regulatory, or qual
 
 ## Selected public work
 
+- [Evidence Lab: PV workflow, data quality, and source retrieval](https://unravelreggie.github.io/pv-evidence-demos/) — interactive bilingual demos using synthetic records and invented passages; [source](https://github.com/Unravelreggie/pv-evidence-demos).
+- [PV PDF tool](https://github.com/Unravelreggie/-PV-PDF) — a personal PDF workflow prototype.
 - [Hierarchical Bayesian Diffusion Drift Model for Working Memory Analysis](https://github.com/Unravelreggie/Hierarchical-Bayesian-Diffusion-Drift-Model-for-Working-Memory-Analysis) — HDDM code for studying reaction time and accuracy in working-memory tasks.
 - [HIV SETA SEM](https://github.com/Unravelreggie/HIV_SETA_SEM) — structural-equation path analysis in R using the lavaan package.
 - [VAERS prototype](https://github.com/Unravelreggie/vaers-prototype) — an exploration tool for public VAERS reports, descriptive summaries, and disproportionality analyses. Spontaneous-report data do not establish incidence or causality.
@@ -43,5 +45,7 @@ I am building toward pharmacovigilance signal analysis and drug safety data anal
 当前工作覆盖统计研究、数据与智能系统、临床数据、真实世界证据和国际药物安全实践。我的原则是：自动化用于呈现证据、降低重复劳动，医疗、法规与质量判断始终由具备资质的人员完成。
 
 未来，我希望在严谨统计方法、透明数据流程和人工复核证据的基础上，持续发展药物警戒信号分析与药物安全数据分析能力。
+
+公开交互演示：[Evidence Lab](https://unravelreggie.github.io/pv-evidence-demos/) 展示 PV 工作流、数据质控和法规检索的设计思路，仅使用合成记录与虚构文档。
 
 </details>
