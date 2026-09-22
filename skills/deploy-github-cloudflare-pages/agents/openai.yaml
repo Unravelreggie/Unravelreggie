@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy GitHub + Cloudflare Pages"
+  short_description: "Build, publish, and verify a static web project."
+  default_prompt: "Use $deploy-github-cloudflare-pages to publish this website to GitHub and Cloudflare Pages, then verify the live site."
