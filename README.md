@@ -32,6 +32,14 @@ I hold an **M.S.P.H. in Biostatistics** from the University of Miami (Aug 2023â€
 
 These are independently written examples with fabricated fixtures, separate from company systems. They contain no company code, operational records, unpublished study findings or licensed templates. The RWE example does not establish a real signal, incidence or causality; the SDV example does not execute production OCR or LLM services.
 
+### See the product prototypes
+
+All screenshots below come from independently written frontends with fictional data. Click a preview to explore the browser-only prototype.
+
+| PV governance & agreements | Vaccine safety methods | Clinical consistency review |
+| --- | --- | --- |
+| [![PV governance frontend with fictional data](https://unravelreggie.github.io/assets/showcases/pv-governance/overview-en.jpg)](https://unravelreggie.github.io/demos/pv-governance/) | [![Vaccine safety frontend with fabricated counts](https://unravelreggie.github.io/assets/showcases/rwe-methods/overview-en.jpg)](https://unravelreggie.github.io/demos/rwe-methods/) | [![Clinical review frontend with synthetic evidence](https://unravelreggie.github.io/assets/showcases/clinical-review/overview-en.jpg)](https://unravelreggie.github.io/demos/clinical-review/) |
+
 ## Research and tools
 
 - [HDDM working-memory research](https://github.com/Unravelreggie/Hierarchical-Bayesian-Diffusion-Drift-Model-for-Working-Memory-Analysis) â€” hierarchical Bayesian modeling of reaction-time and accuracy data.
