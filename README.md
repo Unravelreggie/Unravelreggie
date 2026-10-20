@@ -1,51 +1,52 @@
-# Xiaoyuan Zhang · Reginald Zhang
+# Xiaoyuan (Reginald) Zhang
 
-### Turning questions into evidence
+### PV-AI | Drug Safety
 
-[Website](https://unravelreggie.github.io/) · [GitHub](https://github.com/Unravelreggie) · [Email](mailto:reggiezhang9719@gmail.com) · [CV](https://unravelreggie.github.io/assets/Xiaoyuan_Zhang_CV_2026_EN.pdf?v=20260915)
+**Biostatistics & Vaccine Safety Analytics · Data Governance · AI-Assisted Software Development**
 
-I work in international pharmacovigilance, with training in biostatistics and hands-on experience in data engineering and applied AI. I turn complex clinical and safety questions into structured evidence workflows that are practical to use, inspect, and improve—while keeping qualified people responsible for interpretation and decisions.
+[Website](https://unravelreggie.github.io/) · [LinkedIn](https://www.linkedin.com/in/reginaldzhang/) · [Public CV](https://unravelreggie.github.io/assets/Xiaoyuan_Zhang_CV_2026_EN.pdf?v=20261020) · [Email](mailto:reggiezhang9719@gmail.com)
 
-My academic foundation is computational psychiatry and quantitative decision science. I use statistical research and modeling—including Bayesian methods, longitudinal analysis, and machine learning—to study cognition, behavior, and medical data. I hold an MSPH in Biostatistics from the University of Miami and a BA from Rutgers University with triple majors in Philosophy, Psychology, and Cognitive Science.
+I work across international pharmacovigilance, biostatistics and AI-assisted software development, translating clinical and drug-safety questions into structured data workflows and practical tools.
 
-My current work connects clinical data, real-world evidence, and International Pharmacovigilance practice. I build and analyze data workflows, apply AI where it can assist people responsibly, and translate operational needs into usable systems. I work across three entry points:
+My experience connects three areas:
 
-- **Research & Analysis** — statistical research, clinical and observational-data analysis, and evidence synthesis.
-- **Data & Intelligent Systems** — data engineering, RWE databases, AI applications, AI-assisted software development, workflow design, and Feishu automation.
-- **International Drug Safety Practice** — PV and regulatory operations, PVA coordination, quality review, audits, and partner management.
+- **International PV and data governance:** collaboration across Southeast Asia and Latin America; standardized master data across Sales, Regulatory Affairs and PV; safety-agreement workflows and support for overseas partner audits.
+- **Research and analytics:** public vaccine safety-report analysis, RWE platform and dashboard development, and clinical immunogenicity and prediction modeling. Reporting patterns do not establish incidence or causality.
+- **Software and operations:** regulatory knowledge retrieval, multilingual OCR and translation, data cleaning, duplicate review and document processing. I contributed to safety-report and clinical SDV review tools; qualified people retain medical, legal and quality decisions.
 
-## Current practice
+## Background
 
-- **Multi-vaccine clinical modeling and inference** — Primary Analyst, developing statistical approaches for clinical evidence.
-- **Multi-source safety data foundation** — Primary Data Developer & Analyst for a cross-regulatory adverse-drug-reaction data foundation.
-- **Multilingual MedDRA coding assistance** — Co-developer with the programming lead for PV operations data; English, Chinese, and Japanese candidate terms are ranked for qualified human confirmation.
-- **International GVP regulatory intelligence** — Independent analyst, building source-grounded research paths for human-reviewed regulatory work.
-- **Clinical SDV consistency review** — End-to-end developer, translating CRA requirements into review-support workflows.
+**Sinovac Biotech Co., Ltd. (北京科兴生物制品有限公司)** — International Pharmacovigilance Specialist II, **Jun 2025–Oct 2026**.
 
-These are active practices, not claims of automated medical, regulatory, or quality decisions. Public descriptions exclude confidential products, data, infrastructure, and unpublished findings.
+**University of Miami, BRAIN Group** — Graduate Research Assistant (Unpaid), **Aug 2023–May 2025**. Random-forest analysis used data across 10 Cactus studies; my master’s thesis used two studies for hierarchical Bayesian drift-diffusion modeling of working memory and anxiety. A separate fMRI project involved research-method design and analysis preparation; I did not complete the imaging analysis.
 
-## Selected public work
+I hold an **M.S.P.H. in Biostatistics** from the University of Miami (Aug 2023–May 2025) and a **B.A. with triple majors in Cognitive Science, Psychology and Philosophy** from Rutgers University (Sep 2017–May 2021). Earlier experience spans clinical research, medical case-data/NLP support and biomedical research-material operations.
 
-- [Evidence Lab: PV workflow, data quality, and source retrieval](https://unravelreggie.github.io/pv-evidence-demos/) — interactive bilingual demos using synthetic records and invented passages; [source](https://github.com/Unravelreggie/pv-evidence-demos).
-- [PV PDF tool](https://github.com/Unravelreggie/-PV-PDF) — a personal PDF workflow prototype.
-- [Hierarchical Bayesian Diffusion Drift Model for Working Memory Analysis](https://github.com/Unravelreggie/Hierarchical-Bayesian-Diffusion-Drift-Model-for-Working-Memory-Analysis) — HDDM code for studying reaction time and accuracy in working-memory tasks.
-- [HIV SETA SEM](https://github.com/Unravelreggie/HIV_SETA_SEM) — structural-equation path analysis in R using the lavaan package.
-- [VAERS prototype](https://github.com/Unravelreggie/vaers-prototype) — an exploration tool for public VAERS reports, descriptive summaries, and disproportionality analyses. Spontaneous-report data do not establish incidence or causality.
-- [Portfolio source](https://github.com/Unravelreggie/Unravelreggie.github.io) — the source for my personal site.
+## Selected public demonstrations
 
-## Future direction
+| Theme | Public repository | What it demonstrates |
+|---|---|---|
+| International PV data governance and agreements | [PV governance showcase](https://github.com/Unravelreggie/international-pv-governance-showcase) | Fictional country-product scope, agreement evidence and follow-up |
+| Vaccine safety methods | [RWE signal showcase](https://github.com/Unravelreggie/rwe-signal-showcase) | ROR/PRR calculations with fabricated aggregate counts |
+| Clinical and PV review support | [SDV consistency showcase](https://github.com/Unravelreggie/sdv-consistency-showcase) | Synthetic source-to-record checks and manual-review routing |
 
-I am building toward pharmacovigilance signal analysis and drug safety data analytics, grounded in careful statistical methods, transparent data workflows, and human-reviewed evidence.
+These are independently written examples with fabricated fixtures, separate from company systems. They contain no company code, operational records, unpublished study findings or licensed templates. The RWE example does not establish a real signal, incidence or causality; the SDV example does not execute production OCR or LLM services.
+
+## Research and tools
+
+- [HDDM working-memory research](https://github.com/Unravelreggie/Hierarchical-Bayesian-Diffusion-Drift-Model-for-Working-Memory-Analysis) — hierarchical Bayesian modeling of reaction-time and accuracy data.
+- [HIV SEM coursework](https://github.com/Unravelreggie/HIV_SETA_SEM) — an academic R/lavaan path-analysis project.
+- **R · Python · SQL · SAS · SPSS · React/Vite · FastAPI · Feishu Bitable**; statistical modeling, data quality and AI-assisted software development.
 
 <details>
 <summary>中文简介</summary>
 
-我从事国际药物警戒工作，拥有生物统计训练及数据工程、AI 应用实践，关注如何把复杂的临床和安全性问题转化为可追溯、可审查、可改进的证据流程。我拥有迈阿密大学生物统计学 MSPH 学位，以及罗格斯大学哲学、心理学、认知科学三专业 BA 背景。
+我将国际药物警戒、生物统计与 AI 辅助软件开发结合，把临床和药物安全问题转化为结构化数据流程与实用工具。拥有迈阿密大学生物统计 M.S.P.H. 学位，以及罗格斯大学认知科学、心理学和哲学三专业 B.A. 背景。
 
-当前工作覆盖统计研究、数据与智能系统、临床数据、真实世界证据和国际药物安全实践。我的原则是：自动化用于呈现证据、降低重复劳动，医疗、法规与质量判断始终由具备资质的人员完成。
+2025.06–2026.10 在北京科兴生物制品有限公司任国际 PV 管理专员Ⅱ，推进东南亚及拉丁美洲 PV 协作、跨部门主数据治理、安全性协议和合作伙伴审计支持。开发 RWE 平台、数据清理及文档处理工具，并参与安全性报告和临床 SDV 工具开发。
 
-未来，我希望在严谨统计方法、透明数据流程和人工复核证据的基础上，持续发展药物警戒信号分析与药物安全数据分析能力。
+迈阿密大学 BRAIN Group 为无薪实验室研究经历。基于 Cactus 的 10 项实验进行随机森林分析，硕士论文使用其中两项实验进行 HDDM 建模；另参与 fMRI 方法设计和分析准备，未完成影像分析。
 
-公开交互演示：[Evidence Lab](https://unravelreggie.github.io/pv-evidence-demos/) 展示 PV 工作流、数据质控和法规检索的设计思路，仅使用合成记录与虚构文档。
+上列三个业务相关公开项目均为独立编写的模拟演示，仅使用虚构资料，不包含公司代码、业务记录或未发表结果。自动化辅助证据整理与复核，不替代医学、法规、法务或质量判断。
 
 </details>
